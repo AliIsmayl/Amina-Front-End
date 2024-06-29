@@ -1,0 +1,114 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+// @include MyFlex();
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+#partnerComponent {
+    background: white;
+    padding: 40px 20px;
+    @include MyFlex();
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Montserrat", sans-serif;
+
+    .upBox {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+
+        .partnerBox {
+            display: flex;
+            gap: 20px;
+            text-decoration: none;
+
+            p {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                color: #18407C;
+            }
+
+            img {
+                max-width: 100px;
+            }
+
+            .text {
+                max-width: 200px;
+
+                span {
+                    color: black;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .partner2Box {
+            text-align: center;
+
+            p {
+                font-size: 20px;
+                font-weight: 600;
+                color: #18407C;
+            }
+
+            img {
+                max-width: 100px;
+            }
+        }
+    }
+
+    .middleBox {
+
+        p {
+            font-size: 50px;
+            font-weight: bold;
+            color: #CCB892;
+        }
+    }
+
+    .downBox {
+        @include MyFlex();
+        gap: 10px;
+        flex-wrap: wrap;
+
+        .partnerBox {
+            @include MyFlex();
+            align-items: center;
+            width: 200px;
+            height: 200px;
+
+            img {
+                max-width: 100%;
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 566px) {
+    #partnerComponent {
+        .middleBox {
+            margin-top: 50px;
+
+            p {
+                font-size: 35px;
+            }
+        }
+        .downBox{
+            .partnerBox{
+                margin-top: -50px;
+                img{
+                    max-width: 150px;
+                }
+            }
+            
+        }
+    }
+}

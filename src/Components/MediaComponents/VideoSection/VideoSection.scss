@@ -1,0 +1,33 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include MyFlex();
+.videoSection {
+    // height: 100vh;
+    @include MyFlex();
+    flex-wrap: wrap;
+    gap: 30px 50px;
+    padding:56px 20px;
+
+    .imgBox {
+        height: 220px;
+        width: 340px;
+        border: 2px solid #18407C;
+        cursor: pointer;
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transition: all 0.7s;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+   
+}

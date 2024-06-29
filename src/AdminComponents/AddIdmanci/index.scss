@@ -1,0 +1,41 @@
+.margi{
+    padding-top: 50px;
+}
+.formadd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+.red{
+    color: red;
+}
+
+    form{
+        .inpp{
+            
+            margin-bottom: 20px;
+        input,select{
+            padding: 10px;
+            outline-color: #1D2327;
+border-radius: 10px;
+border: 1px solid #1D2327;
+        }
+        }
+        .btn {
+            background-color: #1D2327;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+          }
+          
+          .btn:hover {
+            background-color: #2a3941;
+          }
+    }
+}
+
+

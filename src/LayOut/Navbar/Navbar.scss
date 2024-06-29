@@ -1,0 +1,244 @@
+@mixin MyFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// @include MyFlex();
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+nav {
+  // background: red;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+  .upBox {
+    background: rgb(24, 64, 124);
+    text-align: center;
+
+    .menuBox {
+      display: none;
+    }
+
+    img {
+      max-width: 150px;
+    }
+  }
+
+  .downBox {
+    @include MyFlex();
+    // padding: 10px 0px;
+background: white;
+    // padding: 20px ;
+    ul {
+      display: flex;
+      list-style: none;
+      position: relative;
+      gap: 50px;
+      @include MyFlex();
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 0px;
+
+      .pageText {
+        font-weight: 600;
+        // display: flex;
+        position: relative;
+
+        p {
+          padding: 17px 0 0 0;
+        }
+
+        .subMenu {
+          background-color: white;
+          -webkit-box-shadow: -4px 12px 53px -12px rgba(24, 64, 124, 0.75);
+          -moz-box-shadow: -4px 12px 53px -12px rgba(24, 64, 124, 0.75);
+          box-shadow: -4px 12px 53px -12px rgba(24, 64, 124, 0.75);
+          position: absolute;
+          width: 300px;
+          top: 30px;
+          opacity: 0;
+          transition: all 0.7s;
+          left: -30px;
+          visibility: hidden;
+          padding: 5px 0;
+
+          .pageLink {
+            text-decoration: none;
+          }
+
+          li {
+            font-size: 15px;
+            padding: 6px 8px 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            position: relative;
+
+
+
+            &:hover {
+              .altText {
+                display: block;
+              }
+            }
+
+            .altText {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              top: 0;
+              right: -250px;
+              display: none;
+              width: 250px;
+              padding: 5px 0;
+
+              li {
+                padding: 6px;
+                width: 100%;
+                background: white;
+                -webkit-box-shadow: 32px 4px 26px -14px rgba(24, 64, 124, 0.75);
+                -moz-box-shadow: 32px 4px 26px -14px rgba(24, 64, 124, 0.75);
+                box-shadow: 32px 4px 26px -14px rgba(24, 64, 124, 0.75);
+
+                span {
+                  width: 0;
+                  transition: all 0.7s;
+                }
+
+                &:hover {
+                  span {
+                    width: 20px;
+                  }
+                }
+              }
+            }
+
+            span {
+              background: #CCB892;
+              height: 3px;
+              width: 0px;
+              transition: all 0.7s;
+            }
+
+            &:hover {
+              span {
+                width: 20px;
+              }
+            }
+          }
+        }
+
+      }
+
+      li {
+        font-size: 20px;
+        cursor: pointer;
+        color: #181818;
+
+        &:hover .subMenu {
+          opacity: 1;
+          margin-top: 12px;
+          transition: 0.5s;
+          visibility: visible;
+        }
+
+        .link {
+          text-decoration: none;
+          color: #181818;
+          @include MyFlex();
+          gap: 10px;
+        }
+
+      }
+    }
+  }
+
+  .respNavbar {
+    display: none;
+  }
+}
+
+.active {
+  span {
+    background: #CCB892;
+    height: 2px;
+    width: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 1162px) {
+  nav {
+    .upBox {
+      text-align: start;
+      display: flex;
+
+      .menuBox {
+        display: block;
+        font-size: 30px;
+        margin-top: 20px;
+        padding: 0px 10px;
+        cursor: pointer;
+        color: white;
+
+      }
+
+      img {
+        max-width: 100px;
+      }
+    }
+
+    .downBox {
+      display: none;
+    }
+
+    .respNavbar {
+      background: #fff;
+      width: 320px;
+      height: 100vh;
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      transform: translateX(-320px);
+      transition: 0.7s;
+      overflow: scroll;
+      display: block;
+
+      .closeBox {
+        font-size: 40px;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .respUpBox {
+        background: #18407C;
+        height: 35%;
+        @include MyFlex();
+
+        img {
+          max-width: 250px;
+        }
+      }
+
+      .respDownBox {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.open {
+  transform: translateX(0px) !important;
+  transition: 0.7s;
+}

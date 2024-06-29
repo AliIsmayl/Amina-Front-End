@@ -1,0 +1,193 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+// @include MyFlex();
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+header {
+    font-family: "Montserrat", sans-serif;
+
+    .swiper {
+        width: 100%;
+    }
+
+    .swiper-slide {
+        height: 730px;
+
+        .swiperBox {
+            width: 100%;
+            display: flex;
+
+            .leftBox {
+
+                padding: 40px;
+                width: 50%;
+                background-color: #18407C;
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                color: #CCB892;
+                height: 100vh;
+
+                p {
+                    font-size: 4rem;
+                    font-weight: bold;
+                    max-width: 90%;
+                    max-height: 80%;
+                    font-family: "Quicksand", sans-serif;
+                }
+
+                button {
+                    margin-top: 50px;
+                    padding: 10px 15px;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    display: inline-block;
+                    width: 200px;
+                    transition: all 0.7s;
+                    background-color: #CCB892;
+                    border: 1px solid #CCB892;
+                    outline: none;
+
+                    &:hover {
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+
+            .rightBox {
+                background: white;
+                width: 50%;
+                display: flex;
+                justify-content: end;
+                align-items: end;
+                border-radius: 0 100px 0 0;
+
+                img {
+                    width: 100%;
+                    border-radius: 0 0 100px 0;
+
+                }
+
+            }
+        }
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+        content: "next";
+        margin-top: -00px;
+        color: white;
+        font-size: 15px;
+        background-color: #CCB892;
+        padding: 10px;
+        border-radius: 50%;
+        height: 30px;
+        width: 40px;
+        @include MyFlex();
+    }
+
+
+
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        margin-top: -00px;
+        content: "prev";
+        color: white;
+        font-size: 15px;
+        background-color: #CCB892;
+        padding: 10px;
+        border-radius: 50%;
+        height: 30px;
+        width: 40px;
+        @include MyFlex();
+    }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    header {
+
+        .swiper-slide {
+
+            .swiperBox {
+                @include MyFlex();
+                flex-direction: column;
+
+                .leftBox {
+                    width: 100%;
+                }
+
+                .rightBox {
+                    width: 100%;
+                }
+            }
+        }
+
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            content: 'next';
+            margin-top: -1000px;
+            color: white;
+        }
+
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after {
+            margin-top: -1000px;
+            content: 'prev';
+            color: white;
+
+        }
+    }
+}
+
+@media only screen and (max-width: 566px) {
+    header {
+
+        .swiper-slide {
+
+            .swiperBox {
+                background: white;
+
+                .leftBox {
+                    border-radius: 0 50px 0 0;
+
+                    p {
+                        font-size: 2.2em;
+
+                    }
+                }
+
+                .rightBox {
+                    img {
+                        border-radius: 0 0 50px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 607px) {
+    header {
+
+
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            display: none;
+        }
+
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after {
+            display: none;
+
+        }
+    }
+}

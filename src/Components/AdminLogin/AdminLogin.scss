@@ -1,0 +1,42 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// @include MyFlex();
+
+.adminLogin {
+    height: 100vh;
+    @include MyFlex();
+    background: #CCB892;
+    position: fixed;
+    width: 100%;
+
+    form {
+        padding: 20px 10px 40px;
+        width: 310px;
+        border-radius: 20px;
+        background: #18407C;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        label{
+            font-size: 20px;
+            color: white;
+        }
+        input{
+            padding: 4px 7px;
+            border-radius: 5px;
+        }
+        button{
+            border-radius: 5px;
+            width: 70px;
+            cursor: pointer;
+            border: none;
+            padding: 2px;
+        }
+    }
+
+}

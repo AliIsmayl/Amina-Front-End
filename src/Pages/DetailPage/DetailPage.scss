@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.detailPage {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+
+    .upBox {
+        font-size: 50px;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-weight: 800;
+        // margin-top: -80px;
+    }
+
+    .downBox {
+        padding: 30px 10px;
+        max-width: 90%;
+        font-size: 20px;
+        text-align: justify;
+    }
+}

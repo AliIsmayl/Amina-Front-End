@@ -1,0 +1,120 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include MyFlex();
+footer {
+    background: #18407C;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+
+
+    .upBox {
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .infoBox {
+                @include MyFlex();
+                gap: 5px;
+                width: 300px;
+                padding: 10px;
+                color: white;
+            }
+
+            .oneBox {
+                display: flex;
+                @include MyFlex();
+                gap: 10px;
+                width: 100px;
+
+                span {
+                    height: 2px;
+                    width: 30px;
+                    background: #CCB892;
+                }
+            }
+        }
+
+        .contactBox {
+            display: flex;
+            flex-wrap: wrap;
+
+            .oneBox {
+                display: flex;
+                @include MyFlex();
+                gap: 10px;
+                width: 180px;
+
+                span {
+                    height: 2px;
+                    width: 30px;
+                    background: #CCB892;
+                }
+            }
+
+            .socialMedia {
+                background: white;
+                height: 50px;
+                width: 50px;
+                @include MyFlex();
+                font-size: 20px;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-left: 20px;
+                transition: all 0.7s;
+color: #18407C;
+                &:hover {
+                    background-color: #CCB892;
+                }
+            }
+        }
+    }
+
+    .downBox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 15px;
+        gap: 10px;
+        .pagesBox {
+            display: flex;
+            gap: 5px;
+
+            a {
+                @include MyFlex();
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 395px) {
+    footer{
+        .upBox{
+            .box{
+                .oneBox{
+                    width: 100%;
+                }
+            }
+          .contactBox{
+            @include MyFlex();
+            gap: 10px;
+            .oneBox{
+                width: 100%;
+            }
+            .socialMedia{
+                margin-left: 10px;
+            }
+           
+          }  
+        }
+    }    
+}

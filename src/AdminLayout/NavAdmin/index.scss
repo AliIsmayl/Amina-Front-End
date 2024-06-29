@@ -1,0 +1,39 @@
+#nav-admin{
+    a{
+        text-decoration: none;
+    }
+    .navigation{
+        // background-color: #1D2327;
+        // color: white;
+        background-color: #1D2327;
+        width: 180px;
+        height: 100vh;
+        position: fixed;
+        ul{
+       
+            padding: 20px;
+            li{
+                margin-bottom: 20px;
+               font-size: 14px;
+                .active{
+                    color:#2271B1;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+                a{
+                   color: white; 
+                   transition: .5s;
+                   display: flex;
+                align-items: center;
+                gap: 5px;
+                &:hover{
+                    color: #2271B1;
+                    transition: .5s;
+                }
+                }
+            }
+        }
+       
+    }
+   
+}

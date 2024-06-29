@@ -1,0 +1,28 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include MyFlex();
+#errorPage {
+    background: #18407C;
+    height: 100vh;
+    background-image: url('https://api.mys.gov.az/api/v1/Storages/1919e359-d7c9-4827-8875-b6dd9c7d1f0b');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    div{
+        background: #CCB892;
+        width: 310px;
+        border-radius: 10px;
+        padding: 10px;
+       p{
+        color: white;
+        .link{
+            text-decoration: none;
+            color: #18407C;
+        }
+       }
+    }
+}

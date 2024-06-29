@@ -1,0 +1,199 @@
+
+.sport-name{
+  text-transform: lowercase;
+  &::first-letter{
+    text-transform: uppercase;
+  }
+}
+.nested-form{
+.btn{
+  margin: 0px 0px 20px;
+  color: #2d3c46 ;
+  font-weight: 500;
+}
+}
+.adminpage {
+  padding-left: 200px;
+.content-p{
+  height: 100px;
+  overflow-y: scroll;
+  max-width: 600px;
+
+}
+  .btn1 {
+    background-color: #1D2327;
+    color: white;
+    margin-top: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .btn1:hover {
+    background-color: #2a3941;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .filterDD {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    .btn {
+      border: 1px solid black;
+      border-radius: 20px;
+      a {
+        color: inherit;
+      }
+    }
+  }
+  .filter {
+    display: flex;
+    gap: 20px;
+    object-fit: cover;
+    input {
+      padding: 10px;
+      border-radius: 20px;
+      outline: none;
+      border: 1px solid;
+    }
+  }
+  input[type="file"] {
+    padding: 0;
+  }
+  input[type="file"]::file-selector-button {
+    background-color: transparent;
+
+    padding: 10px;
+    border: 1px solid rgb(118, 118, 118);
+  }
+  td {
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+  }
+}
+.userpage {
+  padding: 60px 50px;
+  .usertable {
+    .pagination {
+      color: black;
+      .selected {
+        a {
+          color: var(--third--color) !important;
+        }
+      }
+      .page {
+        display: flex;
+        gap: 10px;
+
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+}
+.modal {
+  display: block; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  width: 50%;
+  max-height: 90vh; 
+  overflow-y: auto; 
+  padding: 20px;
+  border-radius: 5px;
+  position: fixed; 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  h6{
+    font-size: 20px;
+    padding: 10px 0;
+    &::first-letter{
+      text-transform: uppercase;
+    }
+    
+  }
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  input {
+    padding: 10px;
+    outline-color: var(--third--color);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    border: 1px solid rgb(118, 118, 118);
+    width: 200px;
+  }
+  input[type="file"] {
+    padding: 0;
+  }
+
+  select {
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  input[type="file"]::file-selector-button {
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid rgb(118, 118, 118);
+    width: 200px;
+    border-radius: 10px;
+  }
+
+  .di {
+    display: flex;
+    justify-content: center;
+    .btn {
+      width: 100px;
+      text-align: center;
+      background-color: #1d2327;
+      border: none;
+      color: white;
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      margin-top: 10px;
+      text-transform: uppercase;
+      &:hover {
+        background-color: #2a3941;
+      }
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

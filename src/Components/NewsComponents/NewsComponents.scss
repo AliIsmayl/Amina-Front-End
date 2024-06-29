@@ -1,0 +1,127 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// @include MyFlex();
+.newsPage {
+    padding: 30px;
+    gap: 40px;
+    flex-wrap: wrap;
+    @include MyFlex();
+
+    .newsCard {
+        background: #F3F3F3;
+        width: 300px;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .imageBox {
+            overflow: hidden;
+            position: relative;
+            @include MyFlex();
+
+            img {
+                width: 100%;
+                transition: all 0.7s;
+                height: 110%;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+            .timeBox {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: #f3f3f390;
+                width: 200px;
+                height: 100px;
+                clip-path: polygon(100% 0, 0 0, 100% 100%);
+
+                .timeBoxHover {
+                    position: absolute;
+                    top: 0px;
+                    right: 20px;
+
+                    P {
+                        font-size: 40px;
+                        font-weight: 600;
+                        display: flex;
+                        flex-direction: column;
+
+                        span {
+                            margin-top: -20px;
+                            font-size: 20px;
+                            font-weight: 100;
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+
+        .textBox {
+            padding: 20px 0px;
+
+            .upText {
+                display: flex;
+
+                span {
+                    height: 2px;
+                    width: 20px;
+                    background: black;
+                    margin: 10px 10px 0 0;
+                }
+
+            }
+
+            h1 {
+                padding: 0 10px 10px;
+                font-size: 20px;
+                color: #CCB892;
+
+                &:hover {
+                    color: black;
+                    cursor: pointer;
+                }
+            }
+
+            h6 {
+                padding: 0 0 0 20px;
+                font-size: 16px;
+                transform: translateZ(3rem);
+                max-height: 100px;
+                /* Максимальная высота блока */
+                overflow: hidden;
+                /* Скрываем все, что выходит за пределы */
+                text-overflow: ellipsis;
+                /* Добавляем многоточие */
+                -webkit-line-clamp: 8;
+                /* Количество строк, которые будут показаны */
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+            }
+            .link{
+                text-decoration: none;
+            }
+
+            h3 {
+                padding: 0 20px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #CCB892;
+
+                &:hover {
+                    color: black;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

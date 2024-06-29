@@ -1,0 +1,54 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// @include MyFlex();
+.container {
+    .normalBox {
+        gap: 20px;
+        @include MyFlex();
+        flex-wrap: wrap;
+
+        .peopleBox {
+            background: #18407C;
+            width: 300px;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                aspect-ratio: 1 / 1.5;
+            }
+
+            .frontTextBox {
+                position: absolute;
+                bottom: 10px;
+                left: 20px;
+
+                p {
+                    font-size: 20px;
+                    color: white;
+                    font-weight: 600;
+                    background-color: rgba(0, 0, 0, 0.407);
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                }
+                span{
+                    padding: 2px 6px;
+                    border-radius: 2px;
+                    color: white;
+                    background-color: #18407C;
+                }
+            }
+        }
+
+    }
+}
